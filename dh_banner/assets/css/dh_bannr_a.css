@@ -29,10 +29,26 @@ body {
 
 .swiper-slide img {
   display: block;
-  width: 100%;
 }
+
 /* 비디오추가 */
 .swiper-slide video {position: absolute;left: 0;top: 0;object-fit: fill;width: 100%;height: 100%;z-index: 1;}
+
+/* 이미지 추가 */
+.imagePoster {position: relative;}
+.imagePoster img {
+  width: auto;height: 245px;
+  position: absolute;left: 50%;transform:translateX(-50%);
+  z-index:999;}
+
+.posterBg {background-color:rgba(0,0,0,1);width: 100%;height: 100%;}
+.posterBg img {
+  width: 100%;height: 200%;
+  position: absolute;top: 45%;transform: translateY(-45%);
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  opacity: 0.6;
+}
 
 /* 링크버튼추가 */
 .swiper .linkBox {

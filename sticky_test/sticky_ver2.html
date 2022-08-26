@@ -1,0 +1,332 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+  <meta property="og:type" content="article" />
+  <title>세상의 디자인을 만나다, 디자인DB</title>
+  <meta property="og:title" content="디자인DB" />
+  <meta property="og:image" content="http://www.designdb.com/images/new_db/contents/designdb_new_logo.jpg" />
+  <meta property="og:description" content="세상의 디자인을 만나다, 디자인DB" />
+  <meta name="google-site-verification" content="hwUnWG3g30pTkzq6TVMsge8KTIxeULKdymZ0_irjbBg" />
+  <meta name="naver-site-verification" content="78a9287dacecf4a4a8de8f91843ab799b218e389" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="cache-control" content="no-cache" />
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      overflow-x: auto;
+    }
+
+    /*메인 메뉴 수정 2021 */
+    .gnb_box {
+      color: #333333;
+    }
+
+    #gnb_title_box {
+      width: 1156px;
+      height: 100%;
+      float: right;
+    }
+
+    #gnb_menu_box {
+      width: 100%;
+      height: 320px;
+      background: #fff;
+      display: none;
+      z-index: 999;
+      position: absolute;
+      top: 173px;
+      left: 0px;
+    }
+
+    .gnb_title {
+      float: left;
+      height: 100%;
+      line-height: 57px;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 15px 0;
+      margin-left: 91px;
+    }
+
+    .gnb_title1 {
+      width: 32px;
+    }
+
+    .gnb_title2 {
+      width: 48px;
+      margin-left: 113px;
+    }
+
+    .gnb_title3 {
+      width: 93px;
+      margin-left: 111px;
+    }
+
+    .gnb_title4 {
+      width: 64px;
+      margin-left: 56px;
+    }
+
+    .gnb_title5 {
+      width: 64px;
+      margin-left: 100px;
+    }
+
+    .gnb_title6 {
+      width: 112px;
+      margin-left: 81px;
+    }
+
+    .gnb_title7 {
+      width: 64px;
+      margin-left: 74px;
+    }
+
+    .gnb_title:hover {
+      color: #e42929;
+    }
+
+    #gnb_menus {
+      width: 1280px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .gnb_menu {
+      float: left;
+      font-size: 15px;
+      border: 1px solid transparent;
+      padding: 10px 5px;
+      margin-left: 14.5px;
+      margin-top: -3px;
+      border-top: 3px solid transparent;
+    }
+
+    .gnb_empty_menu {
+      width: 125px;
+      height: 100px;
+      float: left;
+    }
+
+    .gnb_menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      line-height: 2.5;
+    }
+
+    .gnb_menu li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .gnb_menu li a:hover {
+      color: #e42929;
+    }
+
+    .top_box {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      background: #d10d22;
+      /*background:#2c2c2c; background:#e42929;*/
+    }
+
+    .main_menu {
+      width: 1290px;
+      margin: 0 auto;
+    }
+
+    .footer_box {
+      width: 1300px;
+      margin: 0 auto;
+    }
+
+    .content_box {
+      width: 1625px;
+      margin: 0 auto;
+    }
+
+    /*헤더 info끝*/
+    .main_box {
+      width: 100%;
+      height: 85px;
+      border-bottom: 1px solid #d4d4d4;
+      background: #fff;
+    }
+
+    .main_item_box {
+      float: right;
+      width: 100%;
+      position: relative;
+      height: 85px;
+      background: #fff;
+    }
+
+    .db_logo_box {
+      width: 132px;
+      height: 58px;
+      padding-top: 24px;
+      float: left;
+    }
+
+    .db_logo_box img {
+      width: 120px;
+      height: auto;
+      margin-left: 17.5px;
+    }
+
+    #sticky.stick {
+      position: fixed;
+      top: 0;
+      z-index: 999;
+    }
+
+    /*top_button*/
+    #top_button {
+      display: inline-block;
+      background-color: #aaa;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border-radius: 4px;
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      transition: background-color .3s,
+        opacity .5s, visibility .5s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+    }
+
+    #top_button::after {
+      content: "TOP";
+      font-weight: normal;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 50px;
+      color: #fff;
+    }
+
+    #top_button:hover {
+      cursor: pointer;
+      background-color: #333;
+    }
+
+    #top_button:active {
+      background-color: #555;
+    }
+
+    #top_button.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #h-line {
+      height: 3px;
+      background: #e42929;
+      position: absolute;
+      top: 84px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <a id="top_button"></a>
+
+  <div id="container">
+
+
+    <div class="main_box" id="sticky">
+      <div class="main_menu">
+        <div class="main_item_box">
+          <div class="db_logo_box"><a href="/?menuno=668"><img
+                src="https://designdb.com/images/new_db/logo/designdb_pc_logo_20210720.jpg" alt="designdb 로고" /></a>
+          </div>
+          <div id="gnb_title_box" class="gnb_box">
+            <div class="gnb_title gnb_title1">뉴스</div>
+            <div class="gnb_title gnb_title2">트렌드</div>
+            <div class="gnb_title gnb_title3">보고서•통계</div>
+            <div class="gnb_title gnb_title4">아카이브</div>
+            <div class="gnb_title gnb_title5">권리보호</div>
+            <div class="gnb_title gnb_title6">디자인네트워크</div>
+            <div class="gnb_title gnb_title7">고객센터</div>
+          </div>
+        </div>
+      </div>
+      <div id="h-line"></div>
+    </div>
+    <div id="sticky-anchor"></div>
+
+    <div class="content_bg" style="height:100vh;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, eum? Illo aliquid quis nam quisquam officia sed, earum hic vel eaque quasi veniam. Quisquam, non praesentium culpa reiciendis architecto blanditiis ratione. Sapiente numquam dolores dicta reprehenderit necessitatibus, ducimus voluptas tempora quae labore quidem pariatur. Fugit quasi, debitis fugiat asperiores perferendis sequi ducimus explicabo! Ea pariatur est nulla quos, debitis expedita voluptatibus dolore laboriosam tempore! Obcaecati distinctio sed ratione, quis rerum et culpa beatae repellat, consectetur tenetur nulla inventore asperiores, dolores similique eligendi! Voluptates quasi consequuntur aliquid tenetur, culpa dolor obcaecati error fuga aliquam fugit exercitationem officia delectus quae in tempora sed velit optio minima ex molestiae, quaerat impedit blanditiis sint rem? Voluptate ex soluta harum necessitatibus. Corrupti debitis eveniet aspernatur esse ducimus. Voluptatibus quibusdam sunt quidem, quos nesciunt amet impedit officia officiis, magni asperiores hic reprehenderit optio debitis molestias eum velit id eveniet corporis fugiat iste. Similique quaerat impedit quod, neque quae soluta esse voluptate? Temporibus repudiandae doloribus doloremque ipsa? Est ea tenetur unde sed, provident cupiditate ipsa ducimus veritatis tempora, quaerat aliquid enim officia quidem expedita sit dolores suscipit dolorem quam aspernatur? Ab, dolor omnis a, sapiente magnam exercitationem consequatur maxime corporis dicta debitis sunt voluptatum delectus fugit cum?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, eum? Illo aliquid quis nam quisquam officia sed, earum hic vel eaque quasi veniam. Quisquam, non praesentium culpa reiciendis architecto blanditiis ratione. Sapiente numquam dolores dicta reprehenderit necessitatibus, ducimus voluptas tempora quae labore quidem pariatur. Fugit quasi, debitis fugiat asperiores perferendis sequi ducimus explicabo! Ea pariatur est nulla quos, debitis expedita voluptatibus dolore laboriosam tempore! Obcaecati distinctio sed ratione, quis rerum et culpa beatae repellat, consectetur tenetur nulla inventore asperiores, dolores similique eligendi! Voluptates quasi consequuntur aliquid tenetur, culpa dolor obcaecati error fuga aliquam fugit exercitationem officia delectus quae in tempora sed velit optio minima ex molestiae, quaerat impedit blanditiis sint rem? Voluptate ex soluta harum necessitatibus. Corrupti debitis eveniet aspernatur esse ducimus. Voluptatibus quibusdam sunt quidem, quos nesciunt amet impedit officia officiis, magni asperiores hic reprehenderit optio debitis molestias eum velit id eveniet corporis fugiat iste. Similique quaerat impedit quod, neque quae soluta esse voluptate? Temporibus repudiandae doloribus doloremque ipsa? Est ea tenetur unde sed, provident cupiditate ipsa ducimus veritatis tempora, quaerat aliquid enim officia quidem expedita sit dolores suscipit dolorem quam aspernatur? Ab, dolor omnis a, sapiente magnam exercitationem consequatur maxime corporis dicta debitis sunt voluptatum delectus fugit cum?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, eum? Illo aliquid quis nam quisquam officia sed, earum hic vel eaque quasi veniam. Quisquam, non praesentium culpa reiciendis architecto blanditiis ratione. Sapiente numquam dolores dicta reprehenderit necessitatibus, ducimus voluptas tempora quae labore quidem pariatur. Fugit quasi, debitis fugiat asperiores perferendis sequi ducimus explicabo! Ea pariatur est nulla quos, debitis expedita voluptatibus dolore laboriosam tempore! Obcaecati distinctio sed ratione, quis rerum et culpa beatae repellat, consectetur tenetur nulla inventore asperiores, dolores similique eligendi! Voluptates quasi consequuntur aliquid tenetur, culpa dolor obcaecati error fuga aliquam fugit exercitationem officia delectus quae in tempora sed velit optio minima ex molestiae, quaerat impedit blanditiis sint rem? Voluptate ex soluta harum necessitatibus. Corrupti debitis eveniet aspernatur esse ducimus. Voluptatibus quibusdam sunt quidem, quos nesciunt amet impedit officia officiis, magni asperiores hic reprehenderit optio debitis molestias eum velit id eveniet corporis fugiat iste. Similique quaerat impedit quod, neque quae soluta esse voluptate? Temporibus repudiandae doloribus doloremque ipsa? Est ea tenetur unde sed, provident cupiditate ipsa ducimus veritatis tempora, quaerat aliquid enim officia quidem expedita sit dolores suscipit dolorem quam aspernatur? Ab, dolor omnis a, sapiente magnam exercitationem consequatur maxime corporis dicta debitis sunt voluptatum delectus fugit cum?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, eum? Illo aliquid quis nam quisquam officia sed, earum hic vel eaque quasi veniam. Quisquam, non praesentium culpa reiciendis architecto blanditiis ratione. Sapiente numquam dolores dicta reprehenderit necessitatibus, ducimus voluptas tempora quae labore quidem pariatur. Fugit quasi, debitis fugiat asperiores perferendis sequi ducimus explicabo! Ea pariatur est nulla quos, debitis expedita voluptatibus dolore laboriosam tempore! Obcaecati distinctio sed ratione, quis rerum et culpa beatae repellat, consectetur tenetur nulla inventore asperiores, dolores similique eligendi! Voluptates quasi consequuntur aliquid tenetur, culpa dolor obcaecati error fuga aliquam fugit exercitationem officia delectus quae in tempora sed velit optio minima ex molestiae, quaerat impedit blanditiis sint rem? Voluptate ex soluta harum necessitatibus. Corrupti debitis eveniet aspernatur esse ducimus. Voluptatibus quibusdam sunt quidem, quos nesciunt amet impedit officia officiis, magni asperiores hic reprehenderit optio debitis molestias eum velit id eveniet corporis fugiat iste. Similique quaerat impedit quod, neque quae soluta esse voluptate? Temporibus repudiandae doloribus doloremque ipsa? Est ea tenetur unde sed, provident cupiditate ipsa ducimus veritatis tempora, quaerat aliquid enim officia quidem expedita sit dolores suscipit dolorem quam aspernatur? Ab, dolor omnis a, sapiente magnam exercitationem consequatur maxime corporis dicta debitis sunt voluptatum delectus fugit cum?
+    </div>
+
+    <div class="footer_bg" style="height: 100vh;">1243</div>
+
+
+
+    <link rel="stylesheet" type="text/css" href="https://designdb.com/var/floatingscroll.css" />
+    <script type="text/javascript" src="https://designdb.com/com/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="https://designdb.com/var/jquery.vticker.min.js"></script>
+    <script type="text/javascript" src="https://designdb.com/var/floatingscroll.min.js"></script>
+    <script type="text/javascript">
+
+      var top_btn = $('#top_button');
+
+      $(window).on('scroll', function () {
+        if ($(window).scrollTop() > 200) {
+          top_btn.addClass('show');
+        } else {
+          top_btn.removeClass('show');
+        }
+
+        var height = $(document).scrollTop();
+        var limit = document.body.offsetHeight - window.innerHeight;
+        if (height > 0) {
+          var width = $(window).width() * height / limit;
+          $("#h-line").css("width", width);
+        } else {
+          $("#h-line").css("width", 0);
+        }
+        $("#h-line").stop(true, true).show().fadeOut(1000);
+      });
+      top_btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop: 0
+        }, '300');
+      });
+
+      $(window).scroll(sticky_relocate);
+      sticky_relocate();
+      $(window).resize(function () {
+        adjustScreenSize();
+      });
+
+
+      function sticky_relocate() {
+        var window_top = $(window).scrollTop();
+        var div_top = $('#sticky-anchor').offset().top;
+        if (window_top > div_top) {
+          $('#sticky').addClass('stick');
+        } else {
+          $('#sticky').removeClass('stick');
+        }
+      }
+
+    </script>
+</body>
+
+</html>
