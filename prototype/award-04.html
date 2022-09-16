@@ -11,28 +11,24 @@
     img {width: 100%;height: auto;}
     .trophy {
       position: absolute;
-      left: 225px;bottom: 964px;
+      right: 145px;top: 140px;
       border:none;
-      width: 162px;height: 162px;
       z-index: 2;
       border-radius: 50%;
     }
-    .mask1 {
-      border:1px solid #f00;
-    -webkit-mask-image: url(images/circle.png);
-    mask-image: url(images/circle.png);
-    -webkit-mask-size: 100%;
-    mask-size: 100%;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat; 
-    z-index: 20;  
-  }
+    .anim {
+      width: 120px;height: 120px;
+    }
   </style>
 </head>
 <body>
-  <img src="images/trophy-ani-1.gif" alt="" srcset="" class="trophy">
-  <a href="#" ><img src="images/main__09.16.png" alt=""></a>
+  <a href="#"><img src="images/detail_player.png" alt=""></a>
 
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <div class="trophy">
+    <lottie-player src="images/medal.json"  background="transparent" speed="1" loop autoplay class="anim"></lottie-player>
+  </div>
 
 </body>
 </html>

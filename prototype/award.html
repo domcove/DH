@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    body {text-align: center;position: relative;background: #000;}
+    img {width: 100%;height: auto;}
+    .trophy {
+      position: absolute;
+      left: 225px;bottom: 964px;
+      border:none;
+      width: 162px;height: 162px;
+      z-index: 2;
+      border-radius: 50%;
+    }
+    .lottie {
+      width: 160px;height: 160px;
+    }
+    .mask1 {
+      border:1px solid #f00;
+    -webkit-mask-image: url(images/circle.png);
+    mask-image: url(images/circle.png);
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat; 
+    z-index: 20;  
+  }
+  </style>
+</head>
+<body>
+
+  <!-- <lottie-player id="test" src="https://assets7.lottiefiles.com/packages/lf20_touohxv0.json" autoplay loop class="trophy"></lottie-player> -->
+  <!-- <img src="images/trophy-ani-1.gif" alt="" class="trophy"> -->
+  <a href="#" ><img src="images/main__09.16.png" alt=""></a>
+
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <div class="trophy">
+    <lottie-player src="images/trophy.json"  background="transparent"  speed="1" loop autoplay class="lottie"></lottie-player>
+    <!-- <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_touohxv0.json"  background="transparent"  speed="1" loop autoplay class="lottie"></lottie-player> -->
+  </div>
+
+  <!-- <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+  <script src="/node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"></script> -->
+</body>
+</html>
