@@ -6,32 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hls_test</title>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js" type="application/javascript"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.20.1/video-js.min.css"
+    integrity="sha512-D/n19dhr+LY8HOoGuybX+bJYsZOFKb0r7YpAWBMPg5Hnke6lxdHl6q21d7qiwIsMgdSnBG9pSMQlwTtZ+6ISmw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.20.1/video.min.js"
+    integrity="sha512-xT61DWoPRoAa4ir+LqER5L4/zzuO5tQOQywZYqU8BaZVqolq78bRobozDxozcCZ6tmo92zetGVQHRp+sQHIi/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
 </head>
 
 <body>
-<video autoplay muted loop controls class="video1" width="640" height="360"></video>
-<script src="/assets/js/hls.min.js" type="application/javascript"></script>
-<!-- <script>
-  ((source) => {
-    if (typeof Hls == "undefined") return;
-    if (!document.querySelector(".video1")) return;
-    var hls = new Hls();
-    hls.loadSource(source);
-    hls.attachMedia(document.querySelector(".video1"));
-  })("https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8");
-</script> -->
-<script>
-  ((source) => {
-    if (typeof Hls == "undefined") return;
-    if (!document.querySelector(".video1")) return;
-    var hls = new Hls();
-    hls.loadSource(source);
-    hls.attachMedia(document.querySelector(".video1"));
-  })("https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8");
-</script>
 
+
+  
+  <video id='example-video' width='696' height='392' class="video-js vjs-default-skin vjs-big-play-centered vjs-show-big-play-button-on-pause" controls autoplay loop>
+  <!-- <source src="https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8" type="application/x-mpegURL">  -->
+  <source src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8" type="application/x-mpegURL"> 
+  
+  </video>
+  <script>
+  var player = videojs('example-video');
+  player.play();
+  </script>
 
 </body>
 
