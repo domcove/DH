@@ -15,7 +15,7 @@
   <div class="swiper mySwiper">
     <div class="linkBox"> <a href="https://www.daehong.com/" target="_blank"><span>광고 바로가기</span></a></div>
     <div class="swiper-wrapper">
-      <div class="swiper-slide" onclick="javascript:goLink('aaa')">
+      <div class="swiper-slide" onclick="golink">
         <video class="video-js vjs-default-skin" autoplay muted preload="auto" data-setup='{}'>
           <source src="assets/video/playlist.m3u8" type="application/x-mpegURL">
         </video>
@@ -155,6 +155,16 @@
         </figcaption>
         <!-- //이미지 타이틀 -->
       </div>
+      <div class="swiper-slide">
+        <video class="video-js vjs-default-skin" autoplay muted preload="auto" data-setup='{}'>
+          <source src="assets/video/playlist.m3u8" type="application/x-mpegURL">
+        </video>
+        <figcaption class="desc descBox">
+          <h2>롯데앱카드</h2>
+          <p>금융/보험 / 카드</p>
+        </figcaption>
+        <!-- //비디오 타이틀 -->
+      </div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -170,20 +180,6 @@
   <link href="assets/video/video-js.css" rel="stylesheet">
   <script src="assets/video/video.js"></script>
   <script src="assets/video/videojs-contrib-hls.js"></script>
-
-
-  <script>
-    function goLink(url) {
-      if (url == "aaa") {
-        window.open.href = http: //wwww.naver.com/;
-      } else if (url == "bbb") {
-        window.open.href = http: //wwww.nate.com/;
-      } else if (url == "ccc") {
-        window.open.href = http: //wwww.daum.net/;
-      }
-    }
-
-  </script>
 </body>
 
 </html>
