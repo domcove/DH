@@ -34,6 +34,20 @@ body {
 /* 비디오추가 */
 .swiper-slide video {position: absolute;left: 0;top: 0;object-fit: fill;width: 100%;height: 100%;z-index: 1;}
 
+#my_video_001, 
+#my_video_002, 
+#my_video_003, 
+#my_video_004, 
+#my_video_005, 
+#my_video_006, 
+#my_video_007, 
+#my_video_008, 
+#my_video_009, 
+#my_video_010 {
+  object-fit: fill;
+  width: 100%;height: 100%;
+}
+
 /* 이미지 추가 */
 .imagePoster {position: relative;}
 .imagePoster img {
