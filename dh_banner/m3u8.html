@@ -13,7 +13,7 @@
 <body>
 <video autoplay muted class="video1" width="640" height="360"></video>
 <script src="/assets/js/hls.min.js" type="application/javascript"></script>
-<script>
+<!-- <script>
   ((source) => {
     if (typeof Hls == "undefined") return;
     if (!document.querySelector(".video1")) return;
@@ -21,7 +21,17 @@
     hls.loadSource(source);
     hls.attachMedia(document.querySelector(".video1"));
   })("https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8");
+</script> -->
+<script>
+  ((source) => {
+    if (typeof Hls == "undefined") return;
+    if (!document.querySelector(".video1")) return;
+    var hls = new Hls();
+    hls.loadSource(source);
+    hls.attachMedia(document.querySelector(".video1"));
+  })("/assets/images/chunklist_w1186782398.m3u8");
 </script>
+
 
 </body>
 
