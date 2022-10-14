@@ -72,8 +72,7 @@ body {
   padding: 0.325rem 0.825rem;border-radius: 50px;
   background-color: rgba(196, 13, 67, 0.4);
   font-size: 0.625rem;
-  z-index: 3000;
-  cursor: pointer;
+  z-index: 10000;cursor: pointer;
 }
 .swiper .linkBox a {display: block;text-decoration: none;color: #fff;}
 .swiper .linkBox a:hover {text-shadow: 2px 2px 4px rgba(0,0,0,0.5)}
