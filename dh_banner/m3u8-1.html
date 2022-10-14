@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hls_test</title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js" type="application/javascript"></script> -->
+  
+</head>
+
+<body>
+<video autoplay muted loop controls class="video1" width="640" height="360"></video>
+<script src="/assets/js/hls.min.js" type="application/javascript"></script>
+<!-- <script>
+  ((source) => {
+    if (typeof Hls == "undefined") return;
+    if (!document.querySelector(".video1")) return;
+    var hls = new Hls();
+    hls.loadSource(source);
+    hls.attachMedia(document.querySelector(".video1"));
+  })("https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8");
+</script> -->
+<script>
+  ((source) => {
+    if (typeof Hls == "undefined") return;
+    if (!document.querySelector(".video1")) return;
+    var hls = new Hls();
+    hls.loadSource(source);
+    hls.attachMedia(document.querySelector(".video1"));
+  })("https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8");
+</script>
+
+
+</body>
+
+</html>
