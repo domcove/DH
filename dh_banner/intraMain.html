@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>intranet main</title>
+
+  <!-- // 임시 스타일 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: url(assets/images/bg.png) repeat-x 0 0;
+    }
+
+    .container_wrap {
+      position: relative;
+      background: url(assets/images/IntraMain.png) no-repeat 0 0 / 100% 100%;
+      width: 1440px;
+      margin: 0 auto;
+      min-height: 1367px;
+    }
+
+    .banner {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 406px;
+      margin-left: 277px;
+      width: 541px;
+      height: 247px;
+    }
+    /* iframe control */
+    iframe.resize {
+      transition: all .3s ease-in;
+    }
+    iframe.resize:hover {
+      -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5);
+      transition: all .5s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container_wrap">
+
+    <div class="banner">
+      <iframe src="cube_04.html" class="resize" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>
+      <!-- // iframe load -->
+    </div>
+  </div>
+
+</body>
+
+</html>
