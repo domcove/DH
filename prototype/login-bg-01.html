@@ -28,7 +28,15 @@
 .animate-bg{
     -webkit-animation-name: animateBg;
     animation-name: animateBg;
-
+}
+.animate-bg::after {
+  content: '';
+  position: absolute;display: block;
+  left: 0;top: 0;
+  width: 100%;height: 100%;
+  z-index: 1;
+  background: rgb(0,0,0);
+  background: linear-gradient(211deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 58%, rgba(31,189,113,0.7) 100%);
 }
 .animate{
   -webkit-animation-duration:7s;
@@ -69,7 +77,7 @@
 </head>
 <body>
   <div class="login_contents">
-    <a href="dtracks.html" target="_self"><img src="images/d-track-login.png" alt="" srcset=""></a>
+    <a href="dtracks.html" target="_self"><img src="images/d-track-login-gr.png" alt="" srcset=""></a>
   </div>
   <div class="bg animate animate-bg">
   </div>

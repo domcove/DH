@@ -28,7 +28,15 @@
 .animate-bg{
     -webkit-animation-name: animateBg;
     animation-name: animateBg;
-
+}
+.animate-bg::after {
+  content: '';
+  position: absolute;display: block;
+  left: 0;top: 0;
+  width: 100%;height: 100%;
+  z-index: 1;
+  background: rgb(0,0,0);
+  background: linear-gradient(211deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 47%, rgba(129,0,1,0.7) 100%);
 }
 .animate{
   -webkit-animation-duration:7s;
