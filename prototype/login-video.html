@@ -13,6 +13,7 @@
     }
 
     body {
+      position: relative;
       text-align: center;
       position: relative;
       background: #000;
@@ -53,12 +54,11 @@
       position: fixed;
       right: 0;
       left: 0;
-      top: 200px;
+      top: 50%;
+      transform: translateY(-50%);
       box-sizing: border-box;
       text-align: center;
       z-index: 5;
-      width: 100%;
-      height: 100%;
     }
 
     .video_area {
@@ -79,7 +79,7 @@
       left: 0;
       top: 0;
       background: rgb(0,0,0);
-      background: linear-gradient(211deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 58%, rgba(31,189,113,0.3) 100%);
+      background: linear-gradient(211deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 58%, rgba(31,189,113,0.6) 100%);
     }
 
     .video_area video {
@@ -109,7 +109,7 @@
   </div><!-- video_area -->
 
   <div class="login_contents scrollLock">
-    <a href="dtracks.html" target="_self"><img src="images/login.png" alt="" srcset=""></a>
+    <a href="dtracks.html" target="_self"><img src="images/D-Tracks-login-1.png" alt="" srcset=""></a>
   </div>
 
 
